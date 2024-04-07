@@ -1,19 +1,5 @@
-#### This R script includes code that you need to execute and interpret the output of 
-# for your first CA assignment.
-#
-# Instructions: Install the packages "DescTools" if you've not already done so, 
-# place the "CA1-data.csv" file in the same directory as this code file, 
-# and then step through the code.
-# 
-# It might be a good idea to step through the code, one line at a time, and make 
-# observations & notes about the data as you go, scrolling back and forth through 
-# the console output and plots where necessary.
-#
 # Packages installation:
 # install.packages("DescTools")
-
-# Copyright: Technological University of the Shannon: Midlands, 2024
-# Author: fionam.walshe@tus.ie
 
 library(DescTools)
 
