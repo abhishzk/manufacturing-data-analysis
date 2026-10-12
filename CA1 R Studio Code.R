@@ -39,3 +39,17 @@ summary(data[fail_row_indices, ])
 # in the next two lines of code.
 Desc(data[ok_operation_row_indices, ])
 Desc(data[fail_row_indices, ])
+
+# Missing values and class balance
+colSums(is.na(data))                   #  Number of missing values per variable (0 everywhere).
+prop.table(table(data$Machine_failure)) #  Only about 3.4% of rows are failures, so "always predict no failure" is already ~96.6% accurate.
+
+# Do the operating conditions differ between ok and failed rows?
+aggregate(. ~ Machine_failure, data = data, FUN = mean)
+aggregate(. ~ Machine_failure, data = data, FUN = median)
+
+par(mfrow = c(2, 3))
+for (v in setdiff(names(data), "Machine_failure")) {
+  boxplot(data[[v]] ~ data$Machine_failure, main = v, xlab = "Machine_failure", ylab = v)
+}
+par(mfrow = c(1, 1))
