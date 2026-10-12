@@ -5,5 +5,5 @@ output: html_document
 
 ```{r run, echo=TRUE, message=FALSE, warning=FALSE, fig.width=7, fig.height=5}
 View <- function(...) invisible(NULL)  # View() needs a GUI
-source("CA1 R Studio Code.R", echo = TRUE, max.deparse.length = Inf)
+source("CA1 R Studio Code.R", echo = TRUE, local = TRUE, max.deparse.length = Inf)
 ```
